@@ -1,0 +1,56 @@
+﻿@page
+@model TekEnable.Models.Subscription
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+
+<div class="text-center">
+    <div class="wrapper">
+        <div class="info">
+            <h2 class="title">Newsletter Registration Form</h2>
+        </div>
+        <div id="form-container">
+            <form id="signup-form">
+                @Html.AntiForgeryToken()
+                <div class="form-group txt_field">
+                    @Html.LabelFor(m => m.EmailAddress, "Email Address")
+                    @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control input-box" })
+                    @Html.ValidationMessageFor(m => m.EmailAddress)
+                </div>
+
+                <div class="form-group txt_field">
+                    @Html.LabelFor(m => m.HowYouHeard)
+                    @Html.DropDownListFor(m => m.HowYouHeard, new SelectList(new[] { "","Word of Mouth", "Advert", "Other" }))
+                </div>
+
+                <div class="form-group txt_field">
+                    @Html.LabelFor(m => m.SignUpReason)
+                    @Html.TextBoxFor(m => m.SignUpReason, new { @class = "form-control" })
+                </div>
+
+                <button type="button" id="submit-btn" class="btn-link btn-primary">Sign Up</button>
+            </form>
+
+        
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submit-btn').on('click', function () {
+                $.ajax({
+                    url: '/Subscriptions/SignUp',
+                    type: 'POST',
+                    data: $('#signup-form').serialize(),
+                    success: function (response) {
+                        $('#form-container').html(response);
+                    }
+                });
+            });
+        });
+    </script>
+}

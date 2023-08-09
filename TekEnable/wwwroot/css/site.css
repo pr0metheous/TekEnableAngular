@@ -1,0 +1,138 @@
+html {
+  font-size: 14px;
+}
+header{
+    margin: auto;
+}
+
+
+body {
+    font-family: Arial,sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#tek {
+    font-weight: 900;
+    color: firebrick;
+    font-size: xxx-large;
+    font-family: fantasy;
+    letter-spacing: 3px;
+}
+
+#enable {
+    font-size: xx-large;
+    color: green;
+    font-family: fantasy;
+}
+
+#info {
+    font-family: fantasy;
+    font-size: xx-large;
+    color: azure;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 300px !important;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: auto;
+    height: 3em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.title {
+    font-size: xx-large;
+    color: blanchedalmond;
+    font-style: oblique;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    padding: 34px;
+    border-radius: 6px;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+.wrapper form{
+    margin-top: 30px;
+}
+
+    .wrapper form .input-box {
+        height: 3em;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+label {
+    color: cornsilk;
+    font-weight: 700;
+    font-size: large;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ .btn-primary:hover {
+        background-color: #0056b3;
+        color: white;
+}
+
+select {
+    /* Reset */
+    appearance: none;
+    border: 1px solid #ccc;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 300px;
+    height: 3em;
+    font-weight:700;
+    text-align:center;
+    padding: ;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    color: green;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
